@@ -1,3 +1,48 @@
+# 💎  Worthy – Diamond Pricing Engine
+
+A responsive React + Node.js application that simulates Worthy’s automatic diamond pricing engine.
+Users can select Carat, Cut, Color, and Clarity to get an instant price estimate and view similar diamonds with photo and price.
+Built with React 18 + Vite, Material UI (MUI), SCSS, and a clean Node + Express backend.
+
+## ⚙️ Tech Stack
+
+- Frontend: React 18, Vite, Material UI, SCSS
+- State Management: Context API + useReducer
+- Backend: Node.js + Express + CORS
+- Architecture: routes → controllers → services → data
+- Language: JavaScript (ES2023)
+
+## 🚀 Getting Started
+1. Clone and install
+ - git clone https://github.com/yourusername/worthy-diamond-calculator.git
+ - cd worthy-diamond-calculator
+
+2. Run the backend
+ - cd backend
+ - npm install
+ - npm run dev
+Server runs on http://localhost:4000
+
+3. Run the frontend
+ - cd ../worthy-diamond-calculator
+ - npm install
+ - npm run dev
+App runs on http://localhost:5173
+
+## 💻 Usage
+
+1. Open http://localhost:5173
+2. Adjust Carat, Cut, Color, and Clarity
+3. The estimated price updates automatically (fetched from backend)
+4. Click “View Similar” to open a modal with up to 4 similar diamonds (photo + price)
+5. Resize the window — app is fully responsive across devices
+
+## 🧪 API Endpoints
+Method	Endpoint	Description
+POST	/api/pricing/estimate	Returns calculated price
+POST	/api/diamonds/similar	Returns up to 4 similar diamonds
+GET	/api/diamonds	Returns mock inventory
+
 ## 🧭 How this solution meets the Worthy Frontend Exercise
 
 ### **Core task**
