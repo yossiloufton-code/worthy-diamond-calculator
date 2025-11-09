@@ -14,7 +14,7 @@ Built with React 18 + Vite, Material UI (MUI), SCSS, and a clean Node + Express 
 
 ## 🚀 Getting Started
 1. Clone and install
- - git clone https://github.com/yourusername/worthy-diamond-calculator.git
+ - git clone https://github.com/yossiloufton-code/worthy-diamond-calculator.git
  - cd worthy-diamond-calculator
 
 2. Run the backend
