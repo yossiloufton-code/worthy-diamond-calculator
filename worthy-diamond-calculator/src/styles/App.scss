@@ -1,0 +1,96 @@
+@use "./variables" as *;
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.16), transparent 60%),
+        linear-gradient(180deg, #020617 0%, #020617 45%, #0b1120 100%);
+}
+
+.hero-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 3rem;
+    padding: 4rem 0 3rem;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        padding-top: 2.5rem;
+    }
+}
+
+.hero-text {
+    color: #e5e7eb;
+    max-width: 800px;
+    align-self: center;
+}
+
+.hero-title {
+    color: #f9fafb;
+    margin-bottom: 0.75rem;
+}
+
+.hero-card-wrapper {
+    align-self: center;
+}
+
+.pricing-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px !important;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.55);
+}
+
+.pricing-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 60%);
+    pointer-events: none;
+}
+
+.card-progress {
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.icon-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+.price-panel {
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
+    background: radial-gradient(circle at top, rgba(250, 204, 21, 0.12), transparent 70%),
+        linear-gradient(135deg, #0f172a 0%, #020617 80%);
+    color: #f9fafb;
+}
+
+.price-panel .MuiTypography-body2 {
+    color: rgba(226, 232, 240, 0.8);
+}
+
+.price-value {
+    color: #facc15;
+    text-shadow: 0 6px 22px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.35rem;
+}
+
+.MuiButton-containedSecondary {
+    border-radius: 999px;
+}
